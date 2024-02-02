@@ -1,23 +1,22 @@
-using System.Linq;
 using System;
 public class Solution {
     public string solution(string s) {
         string answer = "";
-        string[] temp = s.Split(' ');
-        for(int i = 0; i < temp.Length; i++)
+        string[] temps = s.Split(' ');
+        for(int i = 0; i < temps.Length; i++)
         {
-            for(int j = 0; j < temp[i].Length; j++)
+            for(int j = 0; j < temps[i].Length; j++)
             {
                 if(j%2==0)
                 {
-                    answer += Char.ToUpper(temp[i][j]);
+                    answer += Char.ToUpper(temps[i][j]);
                 }
                 else
                 {
-                    answer += Char.ToLower(temp[i][j]);
+                    answer += Char.ToLower(temps[i][j]);
                 }
             }
-            if(i != temp.Length -1) answer += " ";
+            if(i != temps.Length - 1) answer += " ";
         }
         return answer;
     }
