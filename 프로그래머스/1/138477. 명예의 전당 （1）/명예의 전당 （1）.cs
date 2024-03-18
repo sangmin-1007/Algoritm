@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 public class Solution {
     public int[] solution(int k, int[] score) {
         int[] answer = new int[score.Length];
@@ -21,6 +20,7 @@ public class Solution {
             temp.Sort();
             answer[i] = temp[0];
         }
+        
         return answer;
     }
 }
