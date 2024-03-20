@@ -2,7 +2,7 @@ using System;
 
 public class Solution {
     public string solution(string[] cards1, string[] cards2, string[] goal) {
-        string answer = "Yes";
+        string answer = "";
         int cards1Index = 0;
         int cards2Index = 0;
         
@@ -11,16 +11,20 @@ public class Solution {
             if(cards1Index < cards1.Length && goal[i] == cards1[cards1Index])
             {
                 cards1Index++;
+                answer = "Yes";
             }
             else if(cards2Index < cards2.Length && goal[i] == cards2[cards2Index])
             {
                 cards2Index++;
+                answer = "Yes";
             }
             else
             {
-                return "No";
+                answer = "No";
+                return answer;
             }
         }
+        
         return answer;
     }
 }
