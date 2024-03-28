@@ -16,15 +16,17 @@ class Solution
                 {
                     prime = nums[i] + nums[j] + nums[k];
                     
-                    for(int n = 2; n < prime; n++)
+                    for(int o = 2; o < prime; o++)
                     {
-                        if(prime % n == 0)
+                        if(prime % o == 0)
                             break;
-                        else if(n == prime - 1)
+                        else
                         {
-                            answer++;
+                            if(o == prime - 1)
+                                answer++;
                         }
                     }
+                        
                 }
             }
         }
