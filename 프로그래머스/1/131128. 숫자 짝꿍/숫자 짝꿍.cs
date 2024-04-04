@@ -19,18 +19,18 @@ public class Solution {
             if(xList[indexX] == yList[indexY])
             {
                 answer.Add(xList[indexX]);
-                ++indexX;
-                ++indexY;
+                indexX++;
+                indexY++;
             }
             else if(xList[indexX] != yList[indexY])
             {
-                if(xList[indexX] < yList[indexY])
+                if(xList[indexX] > yList[indexY])
                 {
-                    ++indexX;
+                    indexY++;
                 }
                 else
                 {
-                    ++indexY;
+                    indexX++;
                 }
             }
         }
