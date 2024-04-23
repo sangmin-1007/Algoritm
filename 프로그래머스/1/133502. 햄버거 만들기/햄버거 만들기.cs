@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-
 public class Solution {
     public int solution(int[] ingredient) {
         int answer = 0;
@@ -9,6 +8,7 @@ public class Solution {
         foreach(int item in ingredient)
         {
             ingredList.Add(item);
+            
             if(ingredList.Count >= 4)
             {
                 if(ingredList[ingredList.Count-4] == 1 && ingredList[ingredList.Count-3] == 2 &&
